@@ -3,9 +3,9 @@ import React, { useState, useEffect } from "react";
 const MobileNav = ({ open, setOpen }) => {
   return (
     <div
-      className={`md:hidden relative top-[70px] left-0 h-screen w-screen transform ${
+      className={`md:hidden relative top-0 left-0 h-screen w-screen transform ${
         open ? "translate-x-0" : "translate-x-full"
-      } transition-transform duration-300 ease-in-out filter `}
+      } transition-transform duration-300 ease-in-out filter bg-white`}
     >
       <div className="flex flex-col items-center text-xl font-medium list-none">
         <li className="my-5 text-text-primary hover-line">
@@ -88,7 +88,7 @@ const Navbar = () => {
           </div>
         </div>
       </header>
-      <div className="container overflow-hidden max-w-full md:mx-[40px] lg:mx-[8%]">
+      <div className="container absolute overflow-hidden max-w-full md:mx-[40px] lg:mx-[8%]">
         <MobileNav open={open} setOpen={setOpen} />
       </div>
     </div>
